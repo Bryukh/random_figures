@@ -57,8 +57,6 @@ export default class Canvas extends Component {
     render() {
         const figures = this.state.figures.map((f, i) => {
             let FigureComponent = this.usableFigures[f.type];
-            console.log(this.usableFigures);
-            console.log(FigureComponent);
             return <FigureComponent
                 x={f.x}
                 y={f.y}
