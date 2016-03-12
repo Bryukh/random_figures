@@ -4,17 +4,6 @@ It's a simple demo for React+SVG usage. Click at the canvas and get random figur
 
 [Live Demo](http://bryukh.com/random_figures/)
 
-
-## Development
-
-```
-npm install
-npm start
-```
-
-Open http://localhost:3000
-
-
 ## Development
 
 ```
