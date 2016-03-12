@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src",
-    "production": "webpack -p --config webpack.production.config.js"
+    "build": "webpack -p --config webpack.production.config.js",
+    "deploy": "npm run build; cp -rv dist/ gh-pages/dist; cd gh-pages; git add dist/; git commit -m \"update `date +'%Y/%m/%d %H:%M:%S'`\";git push; cd .."
   },
   "repository": {
     "type": "git",
