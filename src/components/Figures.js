@@ -22,3 +22,5 @@ export let Circle = (props) => {
                    data-index={props.index}
                    onClick={props.onClick}></circle>;
 };
+
+export default {"Circle": Circle, "Square": Square}
