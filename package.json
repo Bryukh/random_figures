@@ -4,7 +4,8 @@
   "description": "A simple demo for React+SVG usage.",
   "scripts": {
     "start": "node server.js",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "production": "webpack -p"
   },
   "repository": {
     "type": "git",
