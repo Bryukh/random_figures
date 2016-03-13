@@ -1,6 +1,6 @@
 # Random figures
 
-It's a simple demo for React+SVG usage. Click at the canvas and get random figures, click them again to dissapear.
+It's a simple demo for React+Redux+SVG usage. Click at the canvas and get random figures, click them again to disappear.
 
 [Live Demo](http://bryukh.com/random_figures/)
 

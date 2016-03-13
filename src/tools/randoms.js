@@ -1,10 +1,10 @@
-import figures from "./../components/Figures";
+import Figures from "./../components/Figures";
 import CONF from "./../settings";
 
 const HEX = '0123456789ABCDEF'.split('');
 
 export function randomFigureType() {
-    const names = Object.keys(figures);
+    const names = Object.keys(Figures);
     return names[Math.floor(Math.random() * names.length)];
 }
 

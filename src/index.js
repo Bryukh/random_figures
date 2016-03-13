@@ -1,5 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Canvas from './components/Canvas';
+import {render} from 'react-dom';
+import App from './components/App';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import figuresApp from './reducers'
 
-ReactDOM.render(<Canvas />, document.getElementById('root'));
+let store = createStore(figuresApp);
+
+
+render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root'));

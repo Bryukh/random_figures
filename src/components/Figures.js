@@ -1,26 +1,37 @@
-import React, { Component } from 'react';
+import React, {PropTypes} from 'react';
 
-export let Square = (props) => {
-    const {x, y, size} = props;
-    const half = size / 2;
-    return <rect x={x - half}
-                 y={y - half}
-                 width={size}
-                 height={size}
-                 stroke={props.color}
-                 fill={props.color}
-                 data-index={props.index}
-                 onClick={props.onClick}></rect>;
+export const figurePropTypes = {
+    onClick: PropTypes.func.isRequired,
+    x: PropTypes.number.isRequired,
+    y: PropTypes.number.isRequired,
+    size: PropTypes.number.isRequired,
+    color: PropTypes.string.isRequired
 };
 
-export let Circle = (props) => {
-    return <circle cx={props.x}
-                   cy={props.y}
-                   r={props.size / 2}
-                   stroke={props.color}
-                   fill={props.color}
-                   data-index={props.index}
-                   onClick={props.onClick}></circle>;
-};
+const Square = ({x, y, size, color, index, onClick}) => (
+    <rect x={x - size / 2}
+          y={y - size / 2}
+          width={size}
+          height={size}
+          stroke={color}
+          fill={color}
+          onClick={onClick}></rect>
+);
 
-export default {"Circle": Circle, "Square": Square}
+Square.propTypes = figurePropTypes;
+
+const Circle = ({x, y, size, color, index, onClick}) => (
+    <circle cx={x}
+            cy={y}
+            r={size / 2}
+            stroke={color}
+            fill={color}
+            onClick={onClick}></circle>
+);
+
+Circle.propTypes = figurePropTypes;
+
+export default {
+    Circle: Circle,
+    Square: Square
+};

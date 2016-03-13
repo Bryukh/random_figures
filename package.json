@@ -1,7 +1,7 @@
 {
   "name": "random_figures_demo",
-  "version": "1.0.0",
-  "description": "A simple demo for React+SVG usage.",
+  "version": "1.1.0",
+  "description": "A simple demo for React+Redux+SVG usage.",
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src",
@@ -15,6 +15,7 @@
   "keywords": [
     "react",
     "reactjs",
+    "redux",
     "svg",
     "webpack"
   ],
@@ -44,6 +45,7 @@
   "dependencies": {
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
+    "react-redux": "^4.4.0",
     "redux": "^3.3.1"
   }
 }
